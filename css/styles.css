@@ -1,0 +1,154 @@
+.caption {
+  display: none;
+  background-color: transparent;
+  transition: display 2s, position 2s, top 2s, bottom 2s, background-color 2s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  color: #000000;
+  text-align: center;
+  vertical-align: bottom;
+  padding-top: 10px;
+}
+
+.caption sub {
+  color: #7a7979;
+  vertical-align: bottom;
+}
+
+.thumbnail:hover .caption {
+  display: inline-block;
+  background-color: rgba(247, 249, 250, 0.95);
+}
+
+.thumbnail {
+  transition: box-shadow 0.33s, transform 0.33s;
+}
+
+.thumbnail:hover {
+  position: relative;
+  transform: scale(1.1);
+  z-index: 1000;
+  box-shadow: 0px 0px 40px 15px #797979;
+}
+
+/* background */
+
+.cb-slideshow, .cb-slideshow:after {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  margin: 0;
+  list-style: none;
+}
+
+.cb-slideshow:after {
+  content: '';
+  background: transparent url(../img/pattern.png) repeat top left;
+  filter: invert(1);
+}
+
+.cb-slideshow li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: -1;
+  filter: blur(2px);
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: imageAnimation 36s linear infinite 0s;
+  -moz-animation: imageAnimation 36s linear infinite 0s;
+  -o-animation: imageAnimation 36s linear infinite 0s;
+  -ms-animation: imageAnimation 36s linear infinite 0s;
+  animation: imageAnimation 36s linear infinite 0s;
+}
+
+.cb-slideshow li:nth-child(1) span {
+  background-image: url(../img/1.jpg)
+}
+
+.cb-slideshow li:nth-child(2) span {
+  background-image: url(../img/2.jpg);
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) span {
+  background-image: url(../img/3.jpg);
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.cb-slideshow li:nth-child(4) span {
+  background-image: url(../img/4.jpg);
+  -webkit-animation-delay: 18s;
+  -moz-animation-delay: 18s;
+  -o-animation-delay: 18s;
+  -ms-animation-delay: 18s;
+  animation-delay: 18s;
+}
+
+.cb-slideshow li:nth-child(5) span {
+  background-image: url(../img/5.jpg);
+  -webkit-animation-delay: 24s;
+  -moz-animation-delay: 24s;
+  -o-animation-delay: 24s;
+  -ms-animation-delay: 24s;
+  animation-delay: 24s;
+}
+
+.cb-slideshow li:nth-child(6) span {
+  background-image: url(../img/6.jpg);
+  -webkit-animation-delay: 30s;
+  -moz-animation-delay: 30s;
+  -o-animation-delay: 30s;
+  -ms-animation-delay: 30s;
+  animation-delay: 30s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(2.7) translateX(100px) translateY(200px);
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    transform: scale(2.6) translateX(90px) translateY(190px);
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1;
+    transform: scale(2.5) translateX(80px) translateY(180px);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(2.4) translateX(70px) translateY(170px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.fotorama {
+  margin: 0 auto;
+  /* background-color: #000000; */
+}
